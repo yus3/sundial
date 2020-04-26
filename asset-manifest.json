@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sundial/static/css/main.aa8ba17e.chunk.css",
-    "main.js": "/sundial/static/js/main.da359d0f.chunk.js",
-    "main.js.map": "/sundial/static/js/main.da359d0f.chunk.js.map",
+    "main.js": "/sundial/static/js/main.7f801acb.chunk.js",
+    "main.js.map": "/sundial/static/js/main.7f801acb.chunk.js.map",
     "runtime-main.js": "/sundial/static/js/runtime-main.6cb49573.js",
     "runtime-main.js.map": "/sundial/static/js/runtime-main.6cb49573.js.map",
     "static/js/2.ff0bf491.chunk.js": "/sundial/static/js/2.ff0bf491.chunk.js",
     "static/js/2.ff0bf491.chunk.js.map": "/sundial/static/js/2.ff0bf491.chunk.js.map",
     "index.html": "/sundial/index.html",
-    "precache-manifest.20eb3fc2a1fc0070cd1d6ab3749ed765.js": "/sundial/precache-manifest.20eb3fc2a1fc0070cd1d6ab3749ed765.js",
+    "precache-manifest.30ec1916bc6ace0bdcf3a7d2c690f45f.js": "/sundial/precache-manifest.30ec1916bc6ace0bdcf3a7d2c690f45f.js",
     "service-worker.js": "/sundial/service-worker.js",
     "static/css/main.aa8ba17e.chunk.css.map": "/sundial/static/css/main.aa8ba17e.chunk.css.map",
     "static/js/2.ff0bf491.chunk.js.LICENSE.txt": "/sundial/static/js/2.ff0bf491.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6cb49573.js",
     "static/js/2.ff0bf491.chunk.js",
     "static/css/main.aa8ba17e.chunk.css",
-    "static/js/main.da359d0f.chunk.js"
+    "static/js/main.7f801acb.chunk.js"
   ]
 }
