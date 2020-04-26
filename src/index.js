@@ -4,7 +4,7 @@ import './index.css';
 
 import {Layer, Line, Stage} from 'react-konva';
 
-const TRAP_UPPER_HALF = 20;
+const TRAP_UPPER_HALF = 30;
 const TRAP_LOWER_HALF = 70;
 
 class Sundial extends React.Component {
@@ -14,26 +14,33 @@ class Sundial extends React.Component {
     }
 
     componentDidMount() {
+        this.updateDimensions();
+        this.setState({
+            angle: this.calculateAngle(),
+        });
+        document.title = 'Sundial';
+        document.oncontextmenu = function () {
+            return false;
+        };
+        this.intervalID = setInterval(
+            () => this.updateAngle(),
+            1000 * 60, // refresh angle every minute
+        );
+        window.addEventListener("resize", this.updateDimensions.bind(this));
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.intervalID);
+    }
+
+    updateDimensions = () => {
         const h = window.innerHeight
         const w = window.innerWidth
         this.setState({
             height: h,
             width: w,
             trapHeight: Math.sqrt(h * h + w * w),
-            angle: this.calculateAngle(),
         });
-        document.title = 'Sundial';
-        document.oncontextmenu = function () {
-            return false;
-        }
-        this.intervalID = setInterval(
-            () => this.updateAngle(),
-            1000 * 60, // refresh angle every minute
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.intervalID);
     }
 
     calculateAngle() {
@@ -50,8 +57,8 @@ class Sundial extends React.Component {
     }
 
     handleScreenPress = (e) => {
-        const x = e.pageX || (e.evt.touches && e.evt.touches[0].pageX) || 0;
-        const y = e.pageY || (e.evt.touches && e.evt.touches[0].pageY) || 0;
+        const x = e.evt.pageX || (e.evt.touches && e.evt.touches[0].pageX) || 0;
+        const y = e.evt.pageY || (e.evt.touches && e.evt.touches[0].pageY) || 0;
         this.setState({
             pressed: true,
             pressedX: x,
@@ -89,15 +96,17 @@ class Sundial extends React.Component {
     }
 
     render() {
+        const isPressed = this.state.pressed;
         return (
             <div className="fill-window">
                 <Stage width={this.state.width}
                        height={this.state.height}
                        className="fill-window"
                        onTouchStart={this.handleScreenPress.bind(this)}
+                       onTouchMove={isPressed && this.handleScreenPress.bind(this)}
                        onTouchEnd={this.handleScreenRelease.bind(this)}
-                       onTouchMove={this.handleScreenPress.bind(this)}
                        onMouseDown={this.handleScreenPress.bind(this)}
+                       onMouseMove={isPressed && this.handleScreenPress.bind(this)}
                        onMouseUp={this.handleScreenRelease.bind(this)}
                        onMouseLeave={this.handleScreenRelease.bind(this)}
                 >
