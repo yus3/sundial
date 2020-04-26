@@ -4,7 +4,7 @@ import './index.css';
 
 import {Layer, Line, Stage} from 'react-konva';
 
-const TRAP_UPPER_HALF = 30;
+const TRAP_UPPER_HALF = 25;
 const TRAP_LOWER_HALF = 70;
 
 class Sundial extends React.Component {

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34141ac8418981b9f01c4db8eb7e5e79",
+    "revision": "ee8d614f5630c229cea8863b59e15723",
     "url": "/sundial/index.html"
   },
   {
-    "revision": "28d066df0d2818621179",
+    "revision": "9ef35ebbbd6f588e0473",
     "url": "/sundial/static/css/main.aa8ba17e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sundial/static/js/2.ff0bf491.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "28d066df0d2818621179",
-    "url": "/sundial/static/js/main.da359d0f.chunk.js"
+    "revision": "9ef35ebbbd6f588e0473",
+    "url": "/sundial/static/js/main.7f801acb.chunk.js"
   },
   {
     "revision": "2a7052a305d00c6462bc",
